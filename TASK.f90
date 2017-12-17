@@ -13,7 +13,7 @@ X=0; tx1=1; tx2=1; ty1=1; ty2=1; maxS=A(1,1); tmaxS=A(1,1)
 m=size(A(:,1))
 n=size(A(1,:))
 !$omp parallel default(firstprivate) shared(A, x1, x2, y1, y2, maxS)
-do i=omp_get_thread_num(),n,omp_get_num_threads()
+do i=(omp_get_thread_num()+1),n,omp_get_num_threads()
 
  do k=1,m
   B(k)=0
