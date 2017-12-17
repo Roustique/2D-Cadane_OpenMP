@@ -1,6 +1,5 @@
 module Homework
 use :: omp_lib
-implicit none
 contains
 subroutine FindMaxCoordinates(A, x1, y1, x2, y2)
 real(8), intent(in), dimension(:,:) :: A
